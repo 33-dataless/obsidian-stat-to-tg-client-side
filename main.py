@@ -1,6 +1,6 @@
-from config import config
-from manager import Manager
-from logger import configure_logger
+from config.config import config
+from service.manager import Manager
+from config.logger import configure_logger
 from logging import getLogger
 import time
 
@@ -18,8 +18,7 @@ def main() -> None:
     log.info('~ application start')
     try:
         while True:
-            time.sleep(1)
-            log.info("...")
+            time.sleep(5)
     except KeyboardInterrupt:
         manager.stop()
     

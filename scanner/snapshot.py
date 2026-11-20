@@ -1,6 +1,6 @@
 
 from pathlib import Path
-from config import get_current_time
+from config.config import get_current_time
 from logging import getLogger
 import json
 

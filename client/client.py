@@ -1,5 +1,5 @@
 import httpx
-from config import config
+from config.config import config
 
 class Client:
     def __init__(self, url):

@@ -2,8 +2,8 @@ import json
 import base64
 from nacl.secret import Aead
 
-from event import Event
-from config import config
+from scanner.event import Event
+from config.config import config
 
 class Crypto:
     def __init__(self):

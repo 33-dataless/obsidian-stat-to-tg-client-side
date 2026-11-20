@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 class Config:
-    BASE_DIR = Path(__file__).resolve().parent
+    BASE_DIR = Path(__file__).resolve().parent.parent
     load_dotenv(BASE_DIR / ".env")
     _OBSIDIAN_PATH = getenv("PATH_OBSIDIAN")
     _BASE64_KEY = getenv("BASE64_KEY")

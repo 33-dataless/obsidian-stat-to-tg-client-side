@@ -3,11 +3,11 @@ import json
 import logging
 log = logging.getLogger(__name__)
 
-from scanner import Scanner
-from snapshot import SnapshotManager
-from crypto import Crypto
-from client import Client
-from event import Event
+from scanner.scanner import Scanner
+from scanner.snapshot import SnapshotManager
+from config.crypto import Crypto
+from client.client import Client
+from scanner.event import Event
 
 
 class Manager:
@@ -17,7 +17,7 @@ class Manager:
         self.timer = None
         self.timer_lock = threading.Lock()
 
-        self.debounce_seconds = 5
+        self.debounce_seconds = 60 * 60
         self.scanner = Scanner(
             path=self.path,
             callback=self.on_file_changed,
